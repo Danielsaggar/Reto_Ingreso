@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="Bani">
+    Bienvenidos
+</div>
+<div class="inf">
+    Bienvenidos a la plataforma para creación de naves espaciales, por favor seleccione el boton de buscar en caso
+    de que quiera ver todas las naves que hay sido creadas o en el boton de crear en caso de que desee generar un 
+    nuevo tipo de nave
+</div>
+<div class="boxB">
+    <div class="boxA">
+        <a id="BotL"   href="{{ url_for('create') }}">Crear</a>
+    </div>
+    <div class="boxA">
+        <a id="BotR" href="{{ url_for('search') }}">Buscar</a>
+    </div>
+</div>
+{% endblock %}

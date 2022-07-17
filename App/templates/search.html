@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+Búsqueda
+{% endblock %}
+
+{% block content %}
+<div class="Bani">
+    Zona de búsqueda
+</div>
+<div class="inf">
+    
+</div>
+<div class="inf">
+            <form action="" method="post" type="hidden">
+                <div class="select">
+                    <a id="F" href="{{ url_for('searchall') }}">Mostrar todo</a>
+                </div>
+                <div class="select">
+                    <a id="F" href="{{ url_for('searchgrp') }}">Busqueda por tipo y modelo</a>
+                </div>
+                <div class="select">
+                    <a id="F" href="{{ url_for('searchspec') }}">Búsqueda especifica</a>
+                </div>
+            </form>
+</div>
+<div class="boxB">
+    <div>
+        <a id="BotL"   href="{{ url_for('create') }}">Crear</a>
+    </div>
+    <div>
+        <a id="BotR" href="{{ url_for('home') }}">Regresar</a>
+    </div>
+</div>
+{% endblock %}

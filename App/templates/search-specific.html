@@ -1,0 +1,534 @@
+{% extends "base.html" %}
+
+{% block title %}
+Búsqueda
+{% endblock %}
+
+{% block content %}
+<div class="Bani">
+    Zona de búsqueda
+</div>
+<div class="inf">
+    
+</div>
+<div class="menu">
+            <form action="" method="post" type="hidden">
+                <div>
+                    <tr>
+                        <td>{{ frm.tipo.label }}</td>
+                        <td>{{ frm.tipo }}</td>
+                        {% for error in frm.tipo.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>{{ frm.modelo.label }}</td>
+                        <td>{{ frm.modelo }}</td>
+                        {% for error in frm.modelo.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>{{ frm.id.label }}</td>
+                        <td>{{ frm.id }}</td>
+                        {% for error in frm.id.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>{{ frm.search }}</td>
+                        {% for error in frm.search.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    </tr>
+    
+    
+                    {% if v1 == True %}    
+                    <table>
+                    <th>Tripulada
+                        <tr>
+                          <td><strong>Id</strong></td>
+                          <td><strong>Altura</strong></td>
+                          <td><strong>Peso</strong></td>
+                          <td><strong>Potencia</strong></td>
+                          <td><strong>Fuerza</strong></td>
+                          <td><strong>Orbita</strong></td>
+                          <td><strong>Capacidad</strong></td>
+                          <td><strong>Combustible</strong></td>
+                          <td><strong>Tipo</strong></td>
+                          <td><strong>Estado</strong></td>
+                        </tr>  
+                        
+                        {% for usu in bd %}
+                        
+                        {% if usu["Tipo"] == tipo1 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Orbita"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo2 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Orbita"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo3 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Orbita"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo4 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Orbita"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% endfor %} 
+                    </th>                                       
+                    </table>  
+                    {% endif %}
+                    {% if v2 == True %}    
+                    <table>
+                        <th>No Tripulada
+                            <tr>
+                              <td><strong>Id</strong></td>
+                              <td><strong>Altura</strong></td>
+                              <td><strong>Peso</strong></td>
+                              <td><strong>Potencia</strong></td>
+                              <td><strong>Fuerza</strong></td>
+                              <td><strong>Velocidad</strong></td>
+                              <td><strong>Celdas</strong></td>
+                              <td><strong>Combustible</strong></td>
+                              <td><strong>Tipo</strong></td>
+                              <td><strong>Estado</strong></td>
+                            </tr>  
+                            
+                            {% for usu in bd %}
+                            
+                            {% if usu["Tipo"] == tipo1 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Velocidad"] }}</td>
+                                <td>{{ usu["Fotovoltaicas"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                   
+                            </tr>
+                            {% endif %}
+                            {% if usu["Tipo"] == tipo2 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Velocidad"] }}</td>
+                                <td>{{ usu["Fotovoltaicas"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                   
+                            </tr>
+                            {% endif %}
+                            {% if usu["Tipo"] == tipo3 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Velocidad"] }}</td>
+                                <td>{{ usu["Fotovoltaicas"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                   
+                            </tr>
+                            {% endif %}
+                            {% if usu["Tipo"] == tipo4 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Velocidad"] }}</td>
+                                <td>{{ usu["Fotovoltaicas"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                   
+                            </tr>
+                            {% endif %}
+                            {% endfor %} 
+                        </th>                                       
+                    </table>   
+                    {% endif %}
+                    {% if v3 == True %}                   
+                    <table>
+                        <th>Lanzadera
+                            <tr>
+                                <td><strong>Id</strong></td>
+                                <td><strong>Altura</strong></td>
+                                <td><strong>Peso</strong></td>
+                                <td><strong>Potencia</strong></td>
+                                <td><strong>Fuerza</strong></td>
+                                <td><strong>Capacidad</strong></td>
+                                <td><strong>Combustible</strong></td>
+                                <td><strong>Tipo</strong></td>
+                                <td><strong>Estado</strong></td>
+                            </tr>  
+                            
+                            {% for usu in bd %}
+                            {% if usu["Tipo"] == tipo1 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Capacidad"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                  
+                            </tr>
+                            {% endif %}
+                            {% if usu["Tipo"] == tipo2 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Capacidad"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                  
+                            </tr>
+                            {% endif %}
+                            {% if usu["Tipo"] == tipo3 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Capacidad"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                  
+                            </tr>
+                            {% endif %}
+                            {% if usu["Tipo"] == tipo4 %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Capacidad"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                  
+                            </tr>
+                            {% endif %}
+                            {% endfor %} 
+                        </th>                                       
+                    </table>  
+                    {% endif %}
+                </div>
+                <div>
+                    <div class="select">
+                        <td>{{ frm.repair }}</td>                
+                    </div>
+                    <div class="select">
+                        <td>{{ frm.improve }}</td>                
+                    </div>
+                    <div class="select">
+                        <td>{{ frm.update }}</td> 
+                    </div>                    
+                </div>  
+                <div>
+                    <div >
+                        {% if pb == True %} 
+                    <p>
+                        {{ frm.estado.label }}
+                        {{ frm.estado }}
+                        {% for error in frm.peso.errors %}
+                            <div>
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+                    </p>
+                    
+                    </div>
+                    <div>
+                        <p>
+                            {{ frm.act }}
+                        </p>
+                    </div>
+                    {% endif %}
+                </div> 
+                <div>
+                    <div>
+                        {% if shu == True %} 
+                        <p>
+                            {{ frm.altura.label }}
+                            {{ frm.altura }}
+                            {% for error in frm.altura.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.peso.label }}
+                            {{ frm.peso }}
+                            {% for error in frm.peso.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.potencia.label }}
+                            {{ frm.potencia }}
+                            {% for error in frm.potencia.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.fuerza.label }}
+                            {{ frm.fuerza }}
+                            {% for error in frm.fuerza.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>            
+                        <p>
+                            {{ frm.cap.label }}
+                            {{ frm.cap }}
+                            {% for error in frm.cap.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <tr>
+                            <td>{{ frm.combustible.label }}</td>
+                            <td>{{ frm.combustible }}</td>
+                            {% for error in frm.combustible.errors %}
+                            <div>
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                        </tr>
+                        <p>
+                            {{ frm.send }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>             
+                <div>
+                    <div>
+                        {% if man == True %} 
+                        <p>
+                            {{ frm.altura.label }}
+                            {{ frm.altura }}
+                            {% for error in frm.altura.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.peso.label }}
+                            {{ frm.peso }}
+                            {% for error in frm.peso.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.potencia.label }}
+                            {{ frm.potencia }}
+                            {% for error in frm.potencia.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.fuerza.label }}
+                            {{ frm.fuerza }}
+                            {% for error in frm.fuerza.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.orbita.label }}
+                            {{ frm.orbita }}
+                            {% for error in frm.orbita.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.cap.label }}
+                            {{ frm.cap }}
+                            {% for error in frm.cap.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <tr>
+                            <td>{{ frm.combustible.label }}</td>
+                            <td>{{ frm.combustible }}</td>
+                            {% for error in frm.combustible.errors %}
+                            <div>
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                        </tr>
+                        <p>
+                            {{ frm.send }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div> 
+                <div>
+                    <div>
+                        {% if noman == True %} 
+                        <p>
+                            {{ frm.altura.label }}
+                            {{ frm.altura }}
+                            {% for error in frm.altura.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.peso.label }}
+                            {{ frm.peso }}
+                            {% for error in frm.peso.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.potencia.label }}
+                            {{ frm.potencia }}
+                            {% for error in frm.potencia.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.fuerza.label }}
+                            {{ frm.fuerza }}
+                            {% for error in frm.fuerza.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{ frm.velocidad.label }}
+                            {{ frm.velocidad }}
+                            {% for error in frm.velocidad.errors %}
+                                <div>
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        </p>
+                        <tr>
+                            <td>{{ frm.celdas.label }}</td>
+                            <td>{{ frm.celdas }}</td>
+                            {% for error in frm.celdas.errors %}
+                            <div>
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                        </tr>
+                        <tr>
+                            <td>{{ frm.combustible.label }}</td>
+                            <td>{{ frm.combustible }}</td>
+                            {% for error in frm.combustible.errors %}
+                            <div>
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                        </tr>
+                        <p>
+                            {{ frm.send }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div> 
+            </form>
+
+            
+</div>
+<div class="boxB">
+    <div>
+        <a id="BotL"   href="{{ url_for('create') }}">Crear</a>
+    </div>
+    <div>
+        <a id="BotR" href="{{ url_for('search') }}">Regresar</a>
+    </div>
+</div>
+{% endblock %}

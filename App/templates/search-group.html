@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+
+{% block title %}
+Búsqueda
+{% endblock %}
+
+{% block content %}
+<div class="Bani">
+    Zona de búsqueda
+</div>
+<div class="inf">
+    
+</div>
+<div class="menu">
+            <form action="" method="post" type="hidden">
+                <tr>
+                    <td>{{ frm.Btipo.label }}</td>
+                    <td>{{ frm.Btipo }}</td>
+                    {% for error in frm.Btipo.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>{{ frm.Bmodelo.label }}</td>
+                    <td>{{ frm.Bmodelo }}</td>
+                    {% for error in frm.Bmodelo.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>{{ frm.search }}</td>
+                    {% for error in frm.search.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </tr>
+                {% if v1 == True %}    
+                <table>
+                <th>Tripulada
+                    <tr>
+                      <td><strong>Id</strong></td>
+                      <td><strong>Altura</strong></td>
+                      <td><strong>Peso</strong></td>
+                      <td><strong>Potencia</strong></td>
+                      <td><strong>Fuerza</strong></td>
+                      <td><strong>Orbita</strong></td>
+                      <td><strong>Capacidad</strong></td>
+                      <td><strong>Combustible</strong></td>
+                      <td><strong>Tipo</strong></td>
+                      <td><strong>Estado</strong></td>
+                    </tr>  
+                    
+                    {% for usu in trip %}
+                    
+                    {% if usu["Tipo"] == tipo1 %}
+                    <tr>
+                        <td>{{ usu["id"] }}</td>
+                        <td>{{ usu["Altura"] }}</td>
+                        <td>{{ usu["Peso"] }}</td>
+                        <td>{{ usu["Potencia"] }}</td>    
+                        <td>{{ usu["Fuerza"] }}</td>
+                        <td>{{ usu["Orbita"] }}</td>
+                        <td>{{ usu["Capacidad"] }}</td>
+                        <td>{{ usu["Combustible"] }}</td>  
+                        <td>{{ usu["Tipo"] }}</td>
+                        <td>{{ usu["Estado"] }}</td>                   
+                    </tr>
+                    {% endif %}
+                    {% if usu["Tipo"] == tipo2 %}
+                    <tr>
+                        <td>{{ usu["id"] }}</td>
+                        <td>{{ usu["Altura"] }}</td>
+                        <td>{{ usu["Peso"] }}</td>
+                        <td>{{ usu["Potencia"] }}</td>    
+                        <td>{{ usu["Fuerza"] }}</td>
+                        <td>{{ usu["Orbita"] }}</td>
+                        <td>{{ usu["Capacidad"] }}</td>
+                        <td>{{ usu["Combustible"] }}</td>  
+                        <td>{{ usu["Tipo"] }}</td>
+                        <td>{{ usu["Estado"] }}</td>                   
+                    </tr>
+                    {% endif %}
+                    {% if usu["Tipo"] == tipo3 %}
+                    <tr>
+                        <td>{{ usu["id"] }}</td>
+                        <td>{{ usu["Altura"] }}</td>
+                        <td>{{ usu["Peso"] }}</td>
+                        <td>{{ usu["Potencia"] }}</td>    
+                        <td>{{ usu["Fuerza"] }}</td>
+                        <td>{{ usu["Orbita"] }}</td>
+                        <td>{{ usu["Capacidad"] }}</td>
+                        <td>{{ usu["Combustible"] }}</td>  
+                        <td>{{ usu["Tipo"] }}</td>
+                        <td>{{ usu["Estado"] }}</td>                   
+                    </tr>
+                    {% endif %}
+                    {% if usu["Tipo"] == tipo4 %}
+                    <tr>
+                        <td>{{ usu["id"] }}</td>
+                        <td>{{ usu["Altura"] }}</td>
+                        <td>{{ usu["Peso"] }}</td>
+                        <td>{{ usu["Potencia"] }}</td>    
+                        <td>{{ usu["Fuerza"] }}</td>
+                        <td>{{ usu["Orbita"] }}</td>
+                        <td>{{ usu["Capacidad"] }}</td>
+                        <td>{{ usu["Combustible"] }}</td>  
+                        <td>{{ usu["Tipo"] }}</td>
+                        <td>{{ usu["Estado"] }}</td>                   
+                    </tr>
+                    {% endif %}
+                    {% endfor %} 
+                </th>                                       
+                </table>  
+                {% endif %}
+                {% if v2 == True %}    
+                <table>
+                    <th>No Tripulada
+                        <tr>
+                          <td><strong>Id</strong></td>
+                          <td><strong>Altura</strong></td>
+                          <td><strong>Peso</strong></td>
+                          <td><strong>Potencia</strong></td>
+                          <td><strong>Fuerza</strong></td>
+                          <td><strong>Velocidad</strong></td>
+                          <td><strong>Celdas</strong></td>
+                          <td><strong>Combustible</strong></td>
+                          <td><strong>Tipo</strong></td>
+                          <td><strong>Estado</strong></td>
+                        </tr>  
+                        
+                        {% for usu in notrip %}
+                        
+                        {% if usu["Tipo"] == tipo1 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Velocidad"] }}</td>
+                            <td>{{ usu["Fotovoltaicas"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo2 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Velocidad"] }}</td>
+                            <td>{{ usu["Fotovoltaicas"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo3 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Velocidad"] }}</td>
+                            <td>{{ usu["Fotovoltaicas"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo4 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Velocidad"] }}</td>
+                            <td>{{ usu["Fotovoltaicas"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                   
+                        </tr>
+                        {% endif %}
+                        {% endfor %} 
+                    </th>                                       
+                </table>   
+                {% endif %}
+                {% if v3 == True %}                   
+                <table>
+                    <th>Lanzadera
+                        <tr>
+                            <td><strong>Id</strong></td>
+                            <td><strong>Altura</strong></td>
+                            <td><strong>Peso</strong></td>
+                            <td><strong>Potencia</strong></td>
+                            <td><strong>Fuerza</strong></td>
+                            <td><strong>Capacidad</strong></td>
+                            <td><strong>Combustible</strong></td>
+                            <td><strong>Tipo</strong></td>
+                            <td><strong>Estado</strong></td>
+                        </tr>  
+                        
+                        {% for usu in lanz %}
+                        {% if usu["Tipo"] == tipo1 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                  
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo2 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                  
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo3 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                  
+                        </tr>
+                        {% endif %}
+                        {% if usu["Tipo"] == tipo4 %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Capacidad"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                  
+                        </tr>
+                        {% endif %}
+                        {% endfor %} 
+                    </th>                                       
+                </table>  
+                {% endif %}
+            </form>
+</div>
+<div class="boxB">
+    <div>
+        <a id="BotL"   href="{{ url_for('create') }}">Crear</a>
+    </div>
+    <div>
+        <a id="BotR" href="{{ url_for('search') }}">Regresar</a>
+    </div>
+</div>
+{% endblock %}

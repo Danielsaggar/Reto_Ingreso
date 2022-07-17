@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+Lanzadera
+{% endblock %}
+
+{% block content %}
+{{ frm.hidden_tag() }}
+<div class="Bani">
+    Zona de creación de Lanzadera
+</div>
+<div class="inf">
+    Bienvenidos a la zona de creación de naves de Lanzadera, por favor
+    llenar los campos únicamente con valores númericos.<br>
+    Posterior a esto podra seleccionar uno de los 4 tipos de nave, gracias.
+</div>
+<div class="menu">
+            <form action="" method="post" type="hidden">
+                <p>
+                    {{ frm.altura.label }}
+                    {{ frm.altura }}
+                    {% for error in frm.altura.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ frm.peso.label }}
+                    {{ frm.peso }}
+                    {% for error in frm.peso.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ frm.potencia.label }}
+                    {{ frm.potencia }}
+                    {% for error in frm.potencia.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p>
+                <p>
+                    {{ frm.fuerza.label }}
+                    {{ frm.fuerza }}
+                    {% for error in frm.fuerza.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p>            
+                <p>
+                    {{ frm.cap.label }}
+                    {{ frm.cap }}
+                    {% for error in frm.cap.errors %}
+                        <div>
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                </p>
+                <tr>
+                    <td>{{ frm.combustible.label }}</td>
+                    <td>{{ frm.combustible }}</td>
+                    {% for error in frm.combustible.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>{{ frm.tipo.label }}</td>
+                    <td>{{ frm.tipo }}</td>
+                    {% for error in frm.tipo.errors %}
+                    <div>
+                        {{ error }}
+                    </div>
+                    {% endfor %}
+                </tr>
+                <p>
+                    {{ frm.send }}
+                </p>
+               
+            </form>
+</div>
+<div class="boxB">
+    <div class="boxA">
+        <a id="BotL"   href="{{ url_for('create') }}">Regresar</a>
+    </div>
+    <div class="boxA">
+        <a id="BotR" href="{{ url_for('search') }}">Buscar</a>
+    </div>
+</div>
+{% endblock %}

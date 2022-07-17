@@ -1,0 +1,113 @@
+body{
+    background-image: url(/static/resources/background.jpg);
+    background-size: cover;
+}
+table{
+    border-collapse: collapse;
+    margin: 15px;
+}
+tr {
+    border: black 2px solid;
+  }
+td{
+    border: black 2px solid;
+  }
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.banner{
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: rgb(77, 175, 175);
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    flex-direction: column;
+}
+
+.cont{
+    background-image: url(/static/resources/white.png);
+    width: 95%;
+    height: 85%;   
+    top: 5%;
+    left: 2.5%;
+    position: relative;
+
+}
+.Bani{
+    width: 35%;
+    background-image: url(/static/resources/purple.png);
+    text-align: center;
+    left: 32.5%;
+    position: relative;
+    font-family: monospace;
+    font-size: xx-large;
+
+}
+.inf{
+    position: relative;
+    background-image: url(/static/resources/blue.png);
+    padding: 5px;
+    margin: 15px;
+    font-size: x-large;
+    overflow: hidden;
+}
+.menu{
+    position: relative;
+    height: 65%;
+    background-image: url(/static/resources/blue.png);
+    padding: 5px;
+    margin: 15px;
+    font-size: x-large;
+    overflow: scroll;
+}
+
+.boxB{
+    position: absolute;
+    width: 80%;
+    height: 5%;
+    left: 8%;
+    padding: 5px;
+    margin: 15px;
+    font-size: x-large;
+    bottom: 0%;
+}
+.select{
+    float: left;
+    position: relative;
+    margin: 15px;
+    margin-right: 20%;
+    background-image: url(/static/resources/blue.png);
+}
+#BotL{
+    position: absolute;
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    background-image: url(/static/resources/blue.png);
+}
+#BotR{
+    position: absolute;
+    margin-right: 15px;
+    right: 0%;
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    background-image: url(/static/resources/blue.png);
+}
+#F{
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+}

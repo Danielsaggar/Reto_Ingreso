@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}
+Búsqueda
+{% endblock %}
+
+{% block content %}
+<div class="Bani">
+    Zona de búsqueda
+</div>
+<div class="inf">
+    
+</div>
+<div class="menu">
+            <form action="" method="post" type="hidden">
+                <table>
+                <th>Tripulada
+                    <tr>
+                      <td><strong>Id</strong></td>
+                      <td><strong>Altura</strong></td>
+                      <td><strong>Peso</strong></td>
+                      <td><strong>Potencia</strong></td>
+                      <td><strong>Fuerza</strong></td>
+                      <td><strong>Orbita</strong></td>
+                      <td><strong>Capacidad</strong></td>
+                      <td><strong>Combustible</strong></td>
+                      <td><strong>Tipo</strong></td>
+                      <td><strong>Estado</strong></td>
+                    </tr>  
+                    
+                    {% for usu in trip %}
+                    <tr>
+                        <td>{{ usu["id"] }}</td>
+                        <td>{{ usu["Altura"] }}</td>
+                        <td>{{ usu["Peso"] }}</td>
+                        <td>{{ usu["Potencia"] }}</td>    
+                        <td>{{ usu["Fuerza"] }}</td>
+                        <td>{{ usu["Orbita"] }}</td>
+                        <td>{{ usu["Capacidad"] }}</td>
+                        <td>{{ usu["Combustible"] }}</td>  
+                        <td>{{ usu["Tipo"] }}</td>
+                        <td>{{ usu["Estado"] }}</td>                  
+                    </tr>
+                    {% endfor %} 
+                </th>                                       
+                </table>  
+                <table>
+                    <th>No Tripulada
+                        <tr>
+                          <td><strong>Id</strong></td>
+                          <td><strong>Altura</strong></td>
+                          <td><strong>Peso</strong></td>
+                          <td><strong>Potencia</strong></td>
+                          <td><strong>Fuerza</strong></td>
+                          <td><strong>Velocidad</strong></td>
+                          <td><strong>Celdas</strong></td>
+                          <td><strong>Combustible</strong></td>
+                          <td><strong>Tipo</strong></td>
+                          <td><strong>Estado</strong></td>
+                        </tr>  
+                        
+                        {% for usu in notrip %}
+                        <tr>
+                            <td>{{ usu["id"] }}</td>
+                            <td>{{ usu["Altura"] }}</td>
+                            <td>{{ usu["Peso"] }}</td>
+                            <td>{{ usu["Potencia"] }}</td>    
+                            <td>{{ usu["Fuerza"] }}</td>
+                            <td>{{ usu["Velocidad"] }}</td>
+                            <td>{{ usu["Fotovoltaicas"] }}</td>
+                            <td>{{ usu["Combustible"] }}</td>  
+                            <td>{{ usu["Tipo"] }}</td>
+                            <td>{{ usu["Estado"] }}</td>                  
+                        </tr>
+                        {% endfor %} 
+                    </th>                                       
+                    </table>  
+                    <table>
+                        <th>Lanzadera
+                            <tr>
+                              <td><strong>Id</strong></td>
+                              <td><strong>Altura</strong></td>
+                              <td><strong>Peso</strong></td>
+                              <td><strong>Potencia</strong></td>
+                              <td><strong>Fuerza</strong></td>
+                              <td><strong>Capacidad</strong></td>
+                              <td><strong>Combustible</strong></td>
+                              <td><strong>Tipo</strong></td>
+                              <td><strong>Estado</strong></td>
+                            </tr>  
+                            
+                            {% for usu in lanz %}
+                            <tr>
+                                <td>{{ usu["id"] }}</td>
+                                <td>{{ usu["Altura"] }}</td>
+                                <td>{{ usu["Peso"] }}</td>
+                                <td>{{ usu["Potencia"] }}</td>    
+                                <td>{{ usu["Fuerza"] }}</td>
+                                <td>{{ usu["Capacidad"] }}</td>
+                                <td>{{ usu["Combustible"] }}</td>  
+                                <td>{{ usu["Tipo"] }}</td>
+                                <td>{{ usu["Estado"] }}</td>                  
+                            </tr>
+                            {% endfor %} 
+                        </th>                                       
+                        </table>  
+            </form>
+</div>
+<div class="boxB">
+    <div>
+        <a id="BotL"   href="{{ url_for('create') }}">Crear</a>
+    </div>
+    <div>
+        <a id="BotR" href="{{ url_for('search') }}">Regresar</a>
+    </div>
+</div>
+{% endblock %}

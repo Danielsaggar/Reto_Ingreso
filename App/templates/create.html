@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Zona de creación
+{% endblock %}
+
+{% block content %}
+<div class="Bani">
+    Zona de creación
+</div>
+<div class="inf">
+    Bienvenidos a la zona de creación de las naves, por favor
+    seleccione uno de los 3 modelos de naves disponibles
+    Posterior podra seleccionar que tipo de nave desea crear
+</div>
+<div class="inf">
+            <form action="" method="post" type="hidden">
+                <div class="select">
+                    <a id="F" href="{{ url_for('lanz') }}">Lanzadera</a>
+                </div>
+                <div class="select">
+                    <a id="F" href="{{ url_for('trip') }}">Tripulada</a>
+                </div>
+                <div class="select">
+                    <a id="F" href="{{ url_for('notrip') }}">No tripulada</a>
+                </div>
+            </form>
+</div>
+<div class="boxB">
+    <div>
+        <a id="BotL"   href="{{ url_for('home') }}">Regresar</a>
+    </div>
+    <div>
+        <a id="BotR" href="{{ url_for('search') }}">Buscar</a>
+    </div>
+</div>
+{% endblock %}
+
